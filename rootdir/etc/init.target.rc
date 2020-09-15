@@ -66,9 +66,6 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-on early-fs
-    start vold
-
 on fs
     start hwservicemanager
     mount_all /vendor/etc/fstab.qcom --early
